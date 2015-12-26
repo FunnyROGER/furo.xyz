@@ -1,0 +1,640 @@
+@charset "UTF-8"
+@import "https://fonts.googleapis.com/css?family=Roboto+Slab:700,400&subset=latin,cyrillic,cyrillic-ext"
+@import "https://fonts.googleapis.com/css?family=Marck+Script&subset=latin"
+ 
+
+@mixin border-radius($radius)
+  -webkit-border-radius: $radius
+  -moz-border-radius: $radius
+  -ms-border-radius: $radius
+  border-radius: $radius
+
+@mixin transition($transition)
+  -webkit-transition: $transition
+  -moz-transition: $transition
+  -o-transition: $transition
+  transition: $transition
+
+@mixin transform($transform)
+  -webkit-transform: $transform
+  -moz-transform: $transform
+  -o-transform: $transform$transform
+  -ms-transform: $transform
+  transform: $transform
+
+@mixin filter($filter)
+  -webkit-filter: $filter
+  filter: $filter
+
+
+$lightGray: #E4EDF2
+$lightGray2: #D5E5EF
+$lightGray3: #AAC2D2
+$blue: #006CAD
+$lightBlue: #7FC2EA
+$blue2: #095584
+$gray: #668090
+$imgOpacity: 0.7
+
+$device: screen
+$size1: 480px
+$size2: 768px
+$size3: 980px
+$size4: 1200px
+$size5: 1350px
+$size6: 1500px
+
+
+
+/* Обнуление стилей */
+
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym,
+address, big, cite, code, del, dfn, em, font, img,
+ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var,
+dl, dt, dd, ol, ul, li, fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td
+  margin: 0
+  padding: 0
+  border: 0
+  outline: 0
+  font-weight: inherit
+  font-style: inherit
+  font-size: 100%
+  font-family: inherit
+  vertical-align: baseline
+
+a:focus,
+input:focus,
+button:focus,
+span:focus
+  outline: 0
+
+body 
+  line-height: 1
+  color: black
+  background: white
+
+ol, ul
+  list-style: none
+
+/* таблицам необходим cellspacing="0" в разметке */
+table
+  border-collapse: separate
+  border-spacing: 0
+
+caption, th, td
+  text-align: left
+  font-weight: normal
+
+blockquote:before, blockquote:after, q:before, q:after
+  content: ""
+
+blockquote, q
+  quotes: "" ""
+
+
+
+/* Magnific */
+/* padding-bottom and top for image */
+.mfp-no-margins img.mfp-img
+  padding: 0
+
+/* position of shadow behind the image */
+.mfp-no-margins .mfp-figure:after
+  top: 0
+  bottom: 0
+
+/* padding for main container */
+.mfp-no-margins .mfp-container
+  padding: 0
+
+.mfp-with-zoom .mfp-container,
+.mfp-with-zoom.mfp-bg
+  opacity: 0
+  -webkit-backface-visibility: hidden
+  @include transition(all 0.3s ease-out)
+
+.mfp-with-zoom.mfp-ready .mfp-container 
+  opacity: 1
+
+.mfp-with-zoom.mfp-ready.mfp-bg 
+  opacity: 0.8
+
+.mfp-with-zoom.mfp-removing .mfp-container,
+.mfp-with-zoom.mfp-removing.mfp-bg 
+  opacity: 0
+
+.mfp-wrap 
+  right: 0
+
+.mfp-overflow-auto
+  overflow: auto!important
+  img.mfp-img 
+    max-width: none
+    max-height: none!important
+
+button.mfp-close 
+  position: fixed
+  background: rgba(0, 0, 0, 0.28)
+  right: 20px
+
+button.mfp-full
+  z-index: 1050
+  position: fixed
+  left: 20px
+  width: 44px
+  height: 44px
+  color: white
+  font-size: 100%
+  background: rgba(0, 0, 0, 0.28)
+  border: 0
+  opacity: 0.65
+  cursor: pointer
+
+button.mfp-full:hover 
+  opacity: 1
+
+button.mfp-full:active
+  top: 1px
+
+.mfp-zoom-out-cur
+  cursor: default
+  .mfp-image-holder .mfp-close
+    display: none
+
+.mfp-img
+  cursor: zoom-out
+
+
+
+/* Мои стили */
+body
+  overflow-x: hidden
+  font-size: 75%
+  -webkit-backface-visibility: hidden
+  @include transition(all 0.5s ease-out)
+
+
+body, textarea, input 
+  font-family: 'Roboto Slab', sans-serif
+
+.line-bg
+  display: block
+  background: $lightGray
+  background-image: repeating-linear-gradient(135deg, transparent, transparent 50px, rgba(255,255,255,.5) 50px, rgba(255,255,255,.5) 100px)
+  text-shadow: 0px 0px 7px rgba(0, 0, 0, 0.46)
+  color: white
+
+.freeee .busy, .buuusy .free
+  display: none
+
+
+.center-block,
+.mfp-preloader 
+  font-size: 120%
+  line-height: 135%
+
+.mfp-preloader
+  padding: 20px
+
+.center-block
+  position: absolute
+  top: 0
+  bottom: 20%
+  padding: 20px 0px 0px 0px
+  width: 55%
+  overflow: auto
+  box-sizing: border-box
+  h1, p 
+    padding: 0 20px 0 30px
+  h1
+    font-size: 200%
+    line-height: 120%
+    background: url(../img/robot.svg) no-repeat 8px 2px $lightGray2
+    background-size: 27px
+    text-indent: 12px
+    color: #fff
+    text-shadow: 1px 1px 0px $lightGray3, 2px 2px 0px $lightGray3, 3px 3px 0px $lightGray3
+    font-family: 'Marck Script', cursive
+    z-index: 12
+    position: relative
+
+span.busy 
+  color: red
+
+span.free
+  color: #6FAB43
+
+
+
+/* Причиндалы логотипа */
+.even 
+  font-weight: normal
+
+.hi 
+  color: black
+
+.domain-top 
+  font-weight: normal
+
+
+
+/* Меню */
+.menu-block 
+  position: absolute
+  width: 50%
+  z-index: 0
+  bottom: 10px
+  left: 0px
+  font-size: 155%
+  line-height: 145%
+  font-weight: bold
+  color: $blue
+  background: white
+
+.menu-block li
+  padding-left: 10px
+  margin-left: 10px
+  position: relative
+  display: inline-block
+
+.link,
+a:link,
+a:visited,
+li.current > a:hover,
+li.current > a:focus,
+li.current > a:active
+  color: $blue
+
+li.current > a:link,
+li.current > a:visited,
+li.current > a:hover,
+li.current > a:focus,
+li.current > a:active
+  border-bottom: transparent
+  cursor: default
+
+.link:hover, a:hover, .link:focus, a:focus,
+.menu-block li.current > a:hover, .menu-block li.current > a:focus
+  color: $lightBlue
+
+.link:active, a:active 
+  color: $blue2
+
+.menu-block li > a:link, .menu-block li > a:visited, .link
+  text-decoration: none
+  border-bottom: 1px dotted $blue
+  cursor: pointer
+
+.menu-block li > a:hover, .link:hover,
+.menu-block li > a:focus, .link:focus 
+  border-bottom: 1px dotted $lightBlue
+  cursor: pointer
+
+.menu-block li > a:active, .link:active 
+  border-bottom: 1px dotted $blue2
+  cursor: pointer
+
+.menu-block li span 
+  position: absolute
+  left: 0
+  display: block
+  width: 0px
+  background-color: transparent
+  height: 100%
+
+.menu-block li.current span
+  background-color: $blue
+
+
+
+/* Экстра-блок */
+.extra-block 
+  position: absolute
+  width: 45%
+  height: 100%
+  right: 0px
+  top: 0
+  background-color: $lightGray2
+  overflow-x: hidden
+  box-shadow: -5px 0 25px #ccc
+  > div
+    position: absolute
+    display: none
+    top: 0
+    bottom: 0
+    right: -100%
+    left: 100%
+    min-height: 100%
+    background-color: $lightGray2
+    overflow-x: hidden
+    overflow-y: scroll
+
+h2 
+  margin-bottom: 20px
+  font-size: 170%
+  text-align: center
+  color: $lightGray3
+  font-weight: bold
+  padding-top: 15px
+  font-style: normal
+  white-space: nowrap
+
+
+
+/* Связь*/
+.contacts-block
+  a
+    font-size: 100%
+    line-height: 200%
+    display: block
+    text-align: center
+    margin-bottom: 20px
+    background: #E6EEF3
+  .icon
+    text-align: center
+    font-size: 140%
+    padding: 10px
+  .message 
+    padding: 0 10px
+    box-sizing: border-box
+  textarea 
+    border: 0
+    max-height: 200px
+    min-height: 50px
+    width: 100%
+    box-sizing: border-box
+    display: block
+    margin: auto
+    resize: vertical
+    padding: 10px
+  .message input[type="submit"] 
+    width: 100%
+    margin: 10px 0 20px 0
+    font-size: 90%
+    line-height: 200%
+    border-radius: 5px
+    background-color: $lightGray3
+    color: white
+    border: 0
+    box-shadow: 0px 3px 0px 0px #899FB3
+  .message input[type="submit"]:active
+    line-height: 200%
+    box-shadow: none
+    margin: 13px 0 17px 0
+
+
+
+
+/* Обо мне */
+.star
+  overflow: hidden
+  width: 100px
+  height: 100px
+  margin: auto
+  border: 5px solid white
+  border-radius: 50%
+  background: white
+  text-align: center
+  margin-bottom: 10px
+  img 
+    height: 100%
+
+h3, .works-list .line-bg
+  padding: 15px 20px
+  line-height: 180%
+  font-size: 100%
+  font-weight: bold
+
+.me-block p
+  display: block
+  font-size: 100%
+  line-height: 180%
+  padding: 15px
+  color: $gray
+
+/* Работы */
+.works-menu
+  margin: 0 20px 20px 20px
+  text-align: center
+  position: relative
+  left: 0
+  right: 0
+  li
+    display: inline-block
+    padding: 2px 3px
+    margin: 2px
+    position: relative
+    span
+      position: absolute
+      left: 0
+      top: 0
+      width: 100%
+      height: 100%
+      z-index: -1
+  li.current span
+    background: white
+    box-shadow: 0px 3px $lightGray3
+    border-radius: 3px
+
+.works-list
+  > li 
+    position: relative
+    .work-link
+      position: absolute
+      top: 3px
+      right: 10px
+      font-size: 80%
+      color: white
+      background: $lightGray3
+      padding: 3px
+      border-radius: 0 0 4px 4px
+  .descr 
+    display: block
+    position: relative
+    background: white
+    overflow: hidden
+    .paragraph
+      display: block
+      padding: 15px
+      box-shadow: 0px -17px 24px rgba(0, 0, 0, 0.21)
+    img 
+      width: 200%
+      margin-left: -50%
+      display: block
+      box-sizing: border-box
+      opacity: $imgOpacity
+    .text 
+      display: block
+      position: relative
+      background: white
+      background: linear-gradient(to bottom, rgba(255, 255, 255, 0.8), white)
+      color: black
+      margin-top: 0px
+      font-size: 100%
+      line-height: 180%
+  .line-bg
+    border-top: 3px solid $lightGray3
+  .tags 
+    padding: 10px 30px
+    display: block
+    font-size: 90%
+    background: white
+    border-top: 1px solid #E4EDF2
+    a 
+      margin-right: 5px
+  .more
+    display: block
+    text-align: right
+    font-size: 120%
+    a 
+      font-size: 90%
+      padding: 0 20px 10px 0
+      display: inline-block
+    .fa 
+      margin-right: 5px
+      padding-left: 2px
+      color: $gray
+      @include transition(all 0.5s cubic-bezier(0.68, -0.55, 0.27, 1.55))
+    a:hover .fa 
+      @include transform(rotate(360deg))
+
+
+
+
+/* Медиа-запросы */
+@media #{$device} and (min-width: $size1) and (min-height: $size1) 
+
+  body 
+    font-size: 100%
+  
+  .center-block h1 
+    background-position: 8px 8px
+  
+  .works-list
+    .descr
+      a + .text 
+        margin-top: -150px
+      .text 
+        font-size: 80%
+      .paragraph 
+        padding: 20px
+  
+  .me-block p 
+    font-size: 90%
+    padding: 30px
+  
+  .contacts-block a 
+    font-size: 80%
+  
+  h3, .works-list .line-bg 
+    font-size: 90%
+  
+
+
+
+@media #{$device} and (min-height: $size1) 
+  
+  .menu-block 
+    width: 55%
+    bottom: 30px
+    li 
+      display: list-item
+      padding-left: 30px
+      margin-left: 0px
+  
+  .center-block 
+    padding-top: 40px
+
+
+
+
+@media #{$device} and (min-width: $size2) 
+
+  body 
+    font-size: 120%
+  
+  .works-list .descr
+    a + .text 
+      margin-top: -50px
+    img 
+      width: 100%
+      margin-left: 0
+      opacity: 0.2
+      @include filter(blur(3px))
+      -webkit-backface-visibility: hidden
+      @include transition(all 0.3s ease-out)
+    img:hover 
+      opacity: $imgOpacity
+      @include filter(blur(0))
+  
+  .star 
+    width: 150px
+    height: 150px
+    border-width: 7px
+  
+  .center-block h1 
+    background-position: 9px 8px
+    background-size: 35px
+    padding-left: 38px
+  
+  
+  
+  
+@media #{$device} and (min-width: $size3)
+
+  body 
+    font-size: 150%
+  
+  .star 
+    width: 200px
+    height: 200px
+    border-width: 10px
+  
+  .center-block h1 
+    background-position: 11px 8px
+    background-size: 44px
+    padding-left: 50px
+  
+  .works-list .descr .text
+    margin-top: -150px
+  
+  
+
+
+@media #{$device} and (min-width: $size4) 
+
+  html 
+    background: #F1F6F8
+  
+  body 
+    position: absolute
+    height: 100%
+    left: 5%
+    right: 5%
+    background: white
+  
+  .works-list .descr .text 
+    margin-top: -200px
+
+
+
+
+@media #{$device} and (min-width: $size5) 
+
+  body
+    left: 10%
+    right: 10%
+  
+
+
+
+@media #{$device} and (min-width: $size6) 
+
+  body 
+    left: 15%
+    right: 15%
+
+

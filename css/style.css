@@ -1,0 +1,555 @@
+@charset "UTF-8";
+@import "https://fonts.googleapis.com/css?family=Roboto+Slab:700,400&subset=latin,cyrillic,cyrillic-ext";
+@import "https://fonts.googleapis.com/css?family=Marck+Script&subset=latin";
+/* Обнуление стилей */
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym,
+address, big, cite, code, del, dfn, em, font, img,
+ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var,
+dl, dt, dd, ol, ul, li, fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  outline: 0;
+  font-weight: inherit;
+  font-style: inherit;
+  font-size: 100%;
+  font-family: inherit;
+  vertical-align: baseline; }
+
+a:focus,
+input:focus,
+button:focus,
+span:focus {
+  outline: 0; }
+
+body {
+  line-height: 1;
+  color: black;
+  background: white; }
+
+ol, ul {
+  list-style: none; }
+
+/* таблицам необходим cellspacing="0" в разметке */
+table {
+  border-collapse: separate;
+  border-spacing: 0; }
+
+caption, th, td {
+  text-align: left;
+  font-weight: normal; }
+
+blockquote:before, blockquote:after, q:before, q:after {
+  content: ""; }
+
+blockquote, q {
+  quotes: "" ""; }
+
+/* Magnific */
+/* padding-bottom and top for image */
+.mfp-no-margins img.mfp-img {
+  padding: 0; }
+
+/* position of shadow behind the image */
+.mfp-no-margins .mfp-figure:after {
+  top: 0;
+  bottom: 0; }
+
+/* padding for main container */
+.mfp-no-margins .mfp-container {
+  padding: 0; }
+
+.mfp-with-zoom .mfp-container,
+.mfp-with-zoom.mfp-bg {
+  opacity: 0;
+  -webkit-backface-visibility: hidden;
+  -webkit-transition: all 0.3s ease-out;
+  -moz-transition: all 0.3s ease-out;
+  -o-transition: all 0.3s ease-out;
+  transition: all 0.3s ease-out; }
+
+.mfp-with-zoom.mfp-ready .mfp-container {
+  opacity: 1; }
+
+.mfp-with-zoom.mfp-ready.mfp-bg {
+  opacity: 0.8; }
+
+.mfp-with-zoom.mfp-removing .mfp-container,
+.mfp-with-zoom.mfp-removing.mfp-bg {
+  opacity: 0; }
+
+.mfp-wrap {
+  right: 0; }
+
+.mfp-overflow-auto {
+  overflow: auto !important; }
+  .mfp-overflow-auto img.mfp-img {
+    max-width: none;
+    max-height: none !important; }
+
+button.mfp-close {
+  position: fixed;
+  background: rgba(0, 0, 0, 0.28);
+  right: 20px; }
+
+button.mfp-full {
+  z-index: 1050;
+  position: fixed;
+  left: 20px;
+  width: 44px;
+  height: 44px;
+  color: white;
+  font-size: 100%;
+  background: rgba(0, 0, 0, 0.28);
+  border: 0;
+  opacity: 0.65;
+  cursor: pointer; }
+
+button.mfp-full:hover {
+  opacity: 1; }
+
+button.mfp-full:active {
+  top: 1px; }
+
+.mfp-zoom-out-cur {
+  cursor: default; }
+  .mfp-zoom-out-cur .mfp-image-holder .mfp-close {
+    display: none; }
+
+.mfp-img {
+  cursor: zoom-out; }
+
+/* Мои стили */
+body {
+  overflow-x: hidden;
+  font-size: 75%;
+  -webkit-backface-visibility: hidden;
+  -webkit-transition: all 0.5s ease-out;
+  -moz-transition: all 0.5s ease-out;
+  -o-transition: all 0.5s ease-out;
+  transition: all 0.5s ease-out; }
+
+body, textarea, input {
+  font-family: "Roboto Slab", sans-serif; }
+
+.line-bg {
+  display: block;
+  background: #E4EDF2;
+  background-image: repeating-linear-gradient(135deg, transparent, transparent 50px, rgba(255, 255, 255, 0.5) 50px, rgba(255, 255, 255, 0.5) 100px);
+  text-shadow: 0px 0px 7px rgba(0, 0, 0, 0.46);
+  color: white; }
+
+.freeee .busy, .buuusy .free {
+  display: none; }
+
+.center-block,
+.mfp-preloader {
+  font-size: 120%;
+  line-height: 135%; }
+
+.mfp-preloader {
+  padding: 20px; }
+
+.center-block {
+  position: absolute;
+  top: 0;
+  bottom: 20%;
+  padding: 20px 0px 0px 0px;
+  width: 55%;
+  overflow: auto;
+  box-sizing: border-box; }
+  .center-block h1, .center-block p {
+    padding: 0 20px 0 30px; }
+  .center-block h1 {
+    font-size: 200%;
+    line-height: 120%;
+    background: url(../img/robot.svg) no-repeat 8px 2px #D5E5EF;
+    background-size: 27px;
+    text-indent: 12px;
+    color: #fff;
+    text-shadow: 1px 1px 0px #AAC2D2, 2px 2px 0px #AAC2D2, 3px 3px 0px #AAC2D2;
+    font-family: "Marck Script", cursive;
+    z-index: 12;
+    position: relative; }
+
+span.busy {
+  color: red; }
+
+span.free {
+  color: #6FAB43; }
+
+/* Причиндалы логотипа */
+.even {
+  font-weight: normal; }
+
+.hi {
+  color: black; }
+
+.domain-top {
+  font-weight: normal; }
+
+/* Меню */
+.menu-block {
+  position: absolute;
+  width: 50%;
+  z-index: 0;
+  bottom: 10px;
+  left: 0px;
+  font-size: 155%;
+  line-height: 145%;
+  font-weight: bold;
+  color: #006CAD;
+  background: white; }
+
+.menu-block li {
+  padding-left: 10px;
+  margin-left: 10px;
+  position: relative;
+  display: inline-block; }
+
+.link,
+a:link,
+a:visited,
+li.current > a:hover,
+li.current > a:focus,
+li.current > a:active {
+  color: #006CAD; }
+
+li.current > a:link,
+li.current > a:visited,
+li.current > a:hover,
+li.current > a:focus,
+li.current > a:active {
+  border-bottom: transparent;
+  cursor: default; }
+
+.link:hover, a:hover, .link:focus, a:focus,
+.menu-block li.current > a:hover, .menu-block li.current > a:focus {
+  color: #7FC2EA; }
+
+.link:active, a:active {
+  color: #095584; }
+
+.menu-block li > a:link, .menu-block li > a:visited, .link {
+  text-decoration: none;
+  border-bottom: 1px dotted #006CAD;
+  cursor: pointer; }
+
+.menu-block li > a:hover, .link:hover,
+.menu-block li > a:focus, .link:focus {
+  border-bottom: 1px dotted #7FC2EA;
+  cursor: pointer; }
+
+.menu-block li > a:active, .link:active {
+  border-bottom: 1px dotted #095584;
+  cursor: pointer; }
+
+.menu-block li span {
+  position: absolute;
+  left: 0;
+  display: block;
+  width: 0px;
+  background-color: transparent;
+  height: 100%; }
+
+.menu-block li.current span {
+  background-color: #006CAD; }
+
+/* Экстра-блок */
+.extra-block {
+  position: absolute;
+  width: 45%;
+  height: 100%;
+  right: 0px;
+  top: 0;
+  background-color: #D5E5EF;
+  overflow-x: hidden;
+  box-shadow: -5px 0 25px #ccc; }
+  .extra-block > div {
+    position: absolute;
+    display: none;
+    top: 0;
+    bottom: 0;
+    right: -100%;
+    left: 100%;
+    min-height: 100%;
+    background-color: #D5E5EF;
+    overflow-x: hidden;
+    overflow-y: scroll; }
+
+h2 {
+  margin-bottom: 20px;
+  font-size: 170%;
+  text-align: center;
+  color: #AAC2D2;
+  font-weight: bold;
+  padding-top: 15px;
+  font-style: normal;
+  white-space: nowrap; }
+
+/* Связь */
+.contacts-block a {
+  font-size: 100%;
+  line-height: 200%;
+  display: block;
+  text-align: center;
+  margin-bottom: 20px;
+  background: #E6EEF3; }
+.contacts-block .icon {
+  text-align: center;
+  font-size: 140%;
+  padding: 10px; }
+.contacts-block .message {
+  padding: 0 10px;
+  box-sizing: border-box; }
+.contacts-block textarea {
+  border: 0;
+  max-height: 200px;
+  min-height: 50px;
+  width: 100%;
+  box-sizing: border-box;
+  display: block;
+  margin: auto;
+  resize: vertical;
+  padding: 10px; }
+.contacts-block .message input[type="submit"] {
+  width: 100%;
+  margin: 10px 0 20px 0;
+  font-size: 90%;
+  line-height: 200%;
+  border-radius: 5px;
+  background-color: #AAC2D2;
+  color: white;
+  border: 0;
+  box-shadow: 0px 3px 0px 0px #899FB3; }
+.contacts-block .message input[type="submit"]:active {
+  line-height: 200%;
+  box-shadow: none;
+  margin: 13px 0 17px 0; }
+
+/* Обо мне */
+.star {
+  overflow: hidden;
+  width: 100px;
+  height: 100px;
+  margin: auto;
+  border: 5px solid white;
+  border-radius: 50%;
+  background: white;
+  text-align: center;
+  margin-bottom: 10px; }
+  .star img {
+    height: 100%; }
+
+h3, .works-list .line-bg {
+  padding: 15px 20px;
+  line-height: 180%;
+  font-size: 100%;
+  font-weight: bold; }
+
+.me-block p {
+  display: block;
+  font-size: 100%;
+  line-height: 180%;
+  padding: 15px;
+  color: #668090; }
+
+/* Работы */
+.works-menu {
+  margin: 0 20px 20px 20px;
+  text-align: center;
+  position: relative;
+  left: 0;
+  right: 0; }
+  .works-menu li {
+    display: inline-block;
+    padding: 2px 3px;
+    margin: 2px;
+    position: relative; }
+    .works-menu li span {
+      position: absolute;
+      left: 0;
+      top: 0;
+      width: 100%;
+      height: 100%;
+      z-index: -1; }
+  .works-menu li.current span {
+    background: white;
+    box-shadow: 0px 3px #AAC2D2;
+    border-radius: 3px; }
+
+.works-list > li {
+  position: relative; }
+  .works-list > li .work-link {
+    position: absolute;
+    top: 3px;
+    right: 10px;
+    font-size: 80%;
+    color: white;
+    background: #AAC2D2;
+    padding: 3px;
+    border-radius: 0 0 4px 4px; }
+.works-list .descr {
+  display: block;
+  position: relative;
+  background: white;
+  overflow: hidden; }
+  .works-list .descr .paragraph {
+    display: block;
+    padding: 15px;
+    box-shadow: 0px -17px 24px rgba(0, 0, 0, 0.21); }
+  .works-list .descr img {
+    width: 200%;
+    margin-left: -50%;
+    display: block;
+    box-sizing: border-box;
+    opacity: 0.7; }
+  .works-list .descr .text {
+    display: block;
+    position: relative;
+    background: white;
+    background: linear-gradient(to bottom, rgba(255, 255, 255, 0.8), white);
+    color: black;
+    margin-top: 0px;
+    font-size: 100%;
+    line-height: 180%; }
+.works-list .line-bg {
+  border-top: 3px solid #AAC2D2; }
+.works-list .tags {
+  padding: 10px 30px;
+  display: block;
+  font-size: 90%;
+  background: white;
+  border-top: 1px solid #E4EDF2; }
+  .works-list .tags a {
+    margin-right: 5px; }
+.works-list .more {
+  display: block;
+  text-align: right;
+  font-size: 120%; }
+  .works-list .more a {
+    font-size: 90%;
+    padding: 0 20px 10px 0;
+    display: inline-block; }
+  .works-list .more .fa {
+    margin-right: 5px;
+    padding-left: 2px;
+    color: #668090;
+    -webkit-transition: all 0.5s cubic-bezier(0.68, -0.55, 0.27, 1.55);
+    -moz-transition: all 0.5s cubic-bezier(0.68, -0.55, 0.27, 1.55);
+    -o-transition: all 0.5s cubic-bezier(0.68, -0.55, 0.27, 1.55);
+    transition: all 0.5s cubic-bezier(0.68, -0.55, 0.27, 1.55); }
+  .works-list .more a:hover .fa {
+    -webkit-transform: rotate(360deg);
+    -moz-transform: rotate(360deg);
+    -o-transform: rotate(360deg) rotate(360deg);
+    -ms-transform: rotate(360deg);
+    transform: rotate(360deg); }
+
+/* Медиа-запросы */
+@media screen and (min-width: 480px) and (min-height: 480px) {
+  body {
+    font-size: 100%; }
+
+  .center-block h1 {
+    background-position: 8px 8px; }
+
+  .works-list .descr a + .text {
+    margin-top: -150px; }
+  .works-list .descr .text {
+    font-size: 80%; }
+  .works-list .descr .paragraph {
+    padding: 20px; }
+
+  .me-block p {
+    font-size: 90%;
+    padding: 30px; }
+
+  .contacts-block a {
+    font-size: 80%; }
+
+  h3, .works-list .line-bg {
+    font-size: 90%; } }
+@media screen and (min-height: 480px) {
+  .menu-block {
+    width: 55%;
+    bottom: 30px; }
+    .menu-block li {
+      display: list-item;
+      padding-left: 30px;
+      margin-left: 0px; }
+
+  .center-block {
+    padding-top: 40px; } }
+@media screen and (min-width: 768px) {
+  body {
+    font-size: 120%; }
+
+  .works-list .descr a + .text {
+    margin-top: -50px; }
+  .works-list .descr img {
+    width: 100%;
+    margin-left: 0;
+    opacity: 0.2;
+    -webkit-filter: blur(3px);
+    filter: blur(3px);
+    -webkit-backface-visibility: hidden;
+    -webkit-transition: all 0.3s ease-out;
+    -moz-transition: all 0.3s ease-out;
+    -o-transition: all 0.3s ease-out;
+    transition: all 0.3s ease-out; }
+  .works-list .descr img:hover {
+    opacity: 0.7;
+    -webkit-filter: blur(0);
+    filter: blur(0); }
+
+  .star {
+    width: 150px;
+    height: 150px;
+    border-width: 7px; }
+
+  .center-block h1 {
+    background-position: 9px 8px;
+    background-size: 35px;
+    padding-left: 38px; } }
+@media screen and (min-width: 980px) {
+  body {
+    font-size: 150%; }
+
+  .star {
+    width: 200px;
+    height: 200px;
+    border-width: 10px; }
+
+  .center-block h1 {
+    background-position: 11px 8px;
+    background-size: 44px;
+    padding-left: 50px; }
+
+  .works-list .descr .text {
+    margin-top: -150px; } }
+@media screen and (min-width: 1200px) {
+  html {
+    background: #F1F6F8; }
+
+  body {
+    position: absolute;
+    height: 100%;
+    left: 5%;
+    right: 5%;
+    background: white; }
+
+  .works-list .descr .text {
+    margin-top: -200px; } }
+@media screen and (min-width: 1350px) {
+  body {
+    left: 10%;
+    right: 10%; } }
+@media screen and (min-width: 1500px) {
+  body {
+    left: 15%;
+    right: 15%; } }
+
+/*# sourceMappingURL=style.css.map */
